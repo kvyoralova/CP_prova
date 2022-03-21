@@ -4,7 +4,7 @@ title = st.text_input("Gimme a movie title:")
 st.write("The current movie title is ", title)
 
 genre = st.radio("What's your favorite movie genre",('Comedy', 'Drama', 'Documentary'))
- if genre == 'Comedy':
+if genre == 'Comedy':
      st.write('You selected comedy.')
- else:
+else:
      st.write("You didn't select comedy.")
