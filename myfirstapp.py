@@ -32,7 +32,7 @@ response = requests.get(url)
 #Load JSON data into a Python variable.
 weatherData = json.loads(response.text)
 # Uncomment to see the raw JSON text:
-st.write(weatherData) 
+#st.write(weatherData) 
 
 #pprint(weatherData)
 st.write("The maximum temperature at", location, "is", weatherData['main']['temp_max'])
@@ -63,6 +63,6 @@ weatherData = json.loads(response.text)
 st.write("The maximum temperature at", location, "is", weatherData['main']['temp_max'])
 
 col1, col2, col3 = st.columns(3)
-col1.metric("Temperature", str(weatherData['main']['temp']+"°C"), "1.2 °F")
-col2.metric("Wind", str(weatherData['wind']['speed']+"kmh"), "-8%")
-col3.metric("Humidity", str(weatherData['main']['humidity']+"%"), "4%")
+col1.metric("Temperature", weatherData['main']['temp'], "1.2 °F")
+col2.metric("Wind", weatherData['wind']['speed'], "-8%")
+col3.metric("Humidity", weatherData['main']['humidity'], "4%")
