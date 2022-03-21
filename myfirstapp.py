@@ -35,7 +35,7 @@ weatherData = json.loads(response.text)
 #print(weatherData) 
 
 #pprint(weatherData)
-st.write(weatherData['main']['temp_max'])
+st.write("The maximum temperature at", location, "is", weatherData['main']['temp_max'])
 
 
 #add your own APIkey
@@ -60,4 +60,4 @@ weatherData = json.loads(response.text)
 #print(weatherData) 
 
 #pprint(weatherData)
-st.write(weatherData['main']['temp_max'])
+st.write("The maximum temperature at", location, "is", weatherData['main']['temp_max'])
