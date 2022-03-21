@@ -62,11 +62,7 @@ weatherData = json.loads(response.text)
 #pprint(weatherData)
 st.write("The maximum temperature at", location, "is", weatherData['main']['temp_max'])
 
-temp = weatherData['main']['temp'] + "°C"
-wind = weatherData['wind']['speed'] + "kmh"
-hum = weatherData['main']['humidity'] + "%"
-
 col1, col2, col3 = st.columns(3)
-col1.metric("Temperature", temp, "1.2 °F")
-col2.metric("Wind", wind, "-8%")
-col3.metric("Humidity", hum, "4%")
+col1.metric("Temperature", weatherData['main']['temp'], "1.2 °F")
+col2.metric("Wind", weatherData['wind']['speed'], "-8%")
+col3.metric("Humidity", weatherData['main']['humidity'], "4%")
