@@ -1,6 +1,6 @@
 import streamlit as st #'import _ as _' means that you're "assigning" a shorter "variable" to the library
 st.header("Hello world") #the text function displays the text between quotes and brackets
-title = st.text_input("Gimme a movie title:")
+title = st.text_input("Gimme a movie title:", "- insert a title here -")
 st.write("The current movie title is ", title)
 
 genre = st.radio("What's your favorite movie genre",('Comedy', 'Drama', 'Documentary'))
@@ -15,7 +15,7 @@ import streamlit as st
 
 #add your own APIkey
 APIkey = '70e487a499248adf2ee563c7908c7ac0'
-location = st.text_input('Give me a city you want to know the weather: ')
+location = st.text_input('Give me a city you want to know the weather: ', "London")
 
 #check API documentation to see what structure of URL is needed to access the data
 #http://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
